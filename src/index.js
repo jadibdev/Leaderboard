@@ -1,14 +1,6 @@
-import _ from 'lodash';
-import './style.css'
+import './style.css';
+import renderHeadline from './headline.js';
+import renderMainSectionComponent from './mainSection.js';
 
-function component() {
-  const element = document.createElement('div');
-
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Webpack', 'is setup and ready to go :-)'], ' ');
-  element.classList.add('hello');
-
-  return element;
-}
-
-document.body.appendChild(component());
+renderHeadline();
+renderMainSectionComponent();
