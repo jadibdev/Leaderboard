@@ -23,7 +23,7 @@ const mainSectionComponent = `
       <h2>Add your score</h2>
       <form>
         <input type="text"/>
-        <input type="integer"/>
+        <input type="text"/>
         <button id="submit">Submit</button>
       </form>
     </div>
