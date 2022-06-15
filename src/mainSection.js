@@ -1,4 +1,25 @@
+import gameId from './createGame.js';
+
 const content = document.getElementById('content');
+
+gameId.then((result) => {
+  console.log('coming from mainSection', result);
+
+  async function getPlayers() {
+    const id = localStorage.getItem('gameId');
+    const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores`);
+    const data = await response.json();
+    console.log(data.result);
+    console.log('id from localstorage', id);
+
+    for (let i = 0; i < data.result.length; i++) {
+      console.log(data.result[i].user);
+      document.querySelector('ul').insertAdjacentHTML('beforeend', `<li>${data.result[i].user}: ${data.result[i].score}</li>`);
+    }
+  }
+
+  getPlayers();
+});
 
 const mainSectionComponent = `
     <div class="scores-container">
@@ -9,13 +30,7 @@ const mainSectionComponent = `
       </div>
       <div>
         <ul>
-          <li>Name: 100</li>
-          <li>Name: 20</li>
-          <li>Name: 50</li>
-          <li>Name: 78</li>
-          <li>Name: 125</li>
-          <li>Name: 77</li>
-          <li>Name: 42</li>
+          
         </ul>
       </div>
     </div>
