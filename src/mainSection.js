@@ -1,23 +1,9 @@
 import gameId from './createGame.js';
+import getPlayers from './getPlayers.js';
 
 const content = document.getElementById('content');
 
-gameId.then((result) => {
-  console.log('coming from mainSection', result);
-
-  async function getPlayers() {
-    const id = localStorage.getItem('gameId');
-    const response = await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores`);
-    const data = await response.json();
-    console.log(data.result);
-    console.log('id from localstorage', id);
-
-    for (let i = 0; i < data.result.length; i++) {
-      console.log(data.result[i].user);
-      document.querySelector('ul').insertAdjacentHTML('beforeend', `<li>${data.result[i].user}: ${data.result[i].score}</li>`);
-    }
-  }
-
+gameId.then(() => {
   getPlayers();
 });
 
@@ -36,9 +22,9 @@ const mainSectionComponent = `
     </div>
     <div class="add-your-score">
       <h2>Add your score</h2>
-      <form>
-        <input type="text"/>
-        <input type="text"/>
+      <form id="form">
+        <input id="name" type="text" placeholder="Your name" required/>
+        <input id="score" type="text" placeholder="Your score" required/>
         <button id="submit">Submit</button>
       </form>
     </div>
