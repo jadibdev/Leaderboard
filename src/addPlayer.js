@@ -1,4 +1,4 @@
-async function addPlayer(playerName, playerScore) {
+const addPlayer = async (playerName, playerScore) => {
   const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${localStorage.getItem('gameId')}/scores`;
 
   const data = {
@@ -25,6 +25,6 @@ async function addPlayer(playerName, playerScore) {
   const response = await sendRequest.json();
 
   return response;
-}
+};
 
 export default addPlayer;

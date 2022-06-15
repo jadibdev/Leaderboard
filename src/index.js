@@ -1,6 +1,5 @@
 /* eslint-disable no-restricted-globals */
 import './style.css';
-// import renderHeadline from './headline.js';
 import renderMainSectionComponent from './mainSection.js';
 import addPlayer from './addPlayer.js';
 

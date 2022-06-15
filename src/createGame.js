@@ -1,4 +1,4 @@
-async function createNewGame() {
+const createNewGame = async () => {
   const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games';
 
   const data = {
@@ -24,7 +24,7 @@ async function createNewGame() {
   const response = await sendRequest.json();
 
   return response;
-}
+};
 
 const gameId = createNewGame().then((data) => {
   let id;
