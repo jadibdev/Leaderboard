@@ -1,7 +1,49 @@
-.hello {
-  color: red;
+
+.scores-container {
+  display: flex;
+  gap: 75px;
+  margin-left: 30px;
 }
 
-body {
-  background-color: bisque;
+.recent-scores {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.add-your-score input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#refresh {
+  height: 20px;
+  width: 75px;
+}
+
+ul {
+  list-style-type: none;
+  border: 1px solid black;
+  padding-left: 0;
+}
+
+li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: lightgray;
+  padding-left: 10px;
+  border: 1px solid gray;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#submit {
+  height: 20px;
+  width: 75px;
+  align-self: flex-end;
 }
