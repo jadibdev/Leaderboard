@@ -1,4 +1,11 @@
+import gameId from './createGame.js';
+import getPlayers from './getPlayers.js';
+
 const content = document.getElementById('content');
+
+gameId.then(() => {
+  getPlayers();
+});
 
 const mainSectionComponent = `
     <div class="scores-container">
@@ -9,21 +16,15 @@ const mainSectionComponent = `
       </div>
       <div>
         <ul>
-          <li>Name: 100</li>
-          <li>Name: 20</li>
-          <li>Name: 50</li>
-          <li>Name: 78</li>
-          <li>Name: 125</li>
-          <li>Name: 77</li>
-          <li>Name: 42</li>
+          
         </ul>
       </div>
     </div>
     <div class="add-your-score">
       <h2>Add your score</h2>
-      <form>
-        <input type="text"/>
-        <input type="text"/>
+      <form id="form">
+        <input id="name" type="text" placeholder="Your name" required/>
+        <input id="score" type="text" placeholder="Your score" required/>
         <button id="submit">Submit</button>
       </form>
     </div>
