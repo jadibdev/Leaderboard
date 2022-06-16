@@ -39,7 +39,7 @@ input {
   height: 40px;
   width: 75px;
   background: #192757;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0 10px 0;
 }
 
 ul {
@@ -50,7 +50,7 @@ ul {
 
 li {
   background: #192757;
-  padding: 10px 0px 10px 10px;
+  padding: 10px 0 10px 10;
 }
 
 form {
@@ -63,7 +63,7 @@ form {
   width: 75px;
   align-self: flex-end;
   background: #192757;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0 10px 0;
   font-size: 14px;
 }
 
