@@ -2,6 +2,8 @@ body {
   background-image: url("./casino-background.jpeg");
   color: white;
   font-family: Poppins, sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #logo {
