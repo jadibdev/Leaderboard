@@ -1,7 +1,16 @@
+body {
+  background-image: url("./casino-background.jpeg");
+  color: white;
+  font-family: Poppins, sans-serif;
+}
+
+#logo {
+  margin-left: 30px;
+}
 
 .scores-container {
   display: flex;
-  gap: 75px;
+  gap: 30px;
   margin-left: 30px;
 }
 
@@ -12,14 +21,24 @@
   gap: 20px;
 }
 
+input {
+  height: 20px;
+  border: 2px solid#192757;
+}
+
 .add-your-score input {
   display: block;
   margin-bottom: 10px;
 }
 
 #refresh {
-  height: 20px;
+  height: 40px;
   width: 75px;
+  background: #192757;
+  color: white;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border: 1px solid white;
 }
 
 ul {
@@ -29,11 +48,11 @@ ul {
 }
 
 li {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background: lightgray;
+  padding-top: 10px;
+  background: #192757;
   padding-left: 10px;
-  border: 1px solid gray;
+  border: 1px solid white;
+  padding-bottom: 10px;
 }
 
 form {
@@ -43,7 +62,13 @@ form {
 }
 
 #submit {
-  height: 20px;
+  height: 40px;
   width: 75px;
   align-self: flex-end;
+  background: #192757;
+  color: white;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 14px;
+  border: 1px solid white;
 }
