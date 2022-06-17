@@ -8,11 +8,11 @@ gameId.then(() => {
 });
 
 const mainSectionComponent = `
-    <div class="scores-container">
+    <div class="scores-container d-flex">
     <div class="recent-scores-container">
-      <div class="recent-scores">
+      <div class="recent-scores d-flex">
         <h2>Recent scores</h2>
-        <button id="refresh">Refresh</button>
+        <button class="white border-white" id="refresh">Refresh</button>
       </div>
       <div>
         <ul>
@@ -22,10 +22,10 @@ const mainSectionComponent = `
     </div>
     <div class="add-your-score">
       <h2>Add your score</h2>
-      <form id="form">
+      <form id="form" class="d-flex">
         <input id="name" type="text" placeholder="Your name" required/>
         <input id="score" type="text" placeholder="Your score" required/>
-        <button id="submit">Submit</button>
+        <button class="white border-white" id="submit">Submit</button>
       </form>
     </div>
   </div>

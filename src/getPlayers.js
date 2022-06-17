@@ -4,7 +4,7 @@ const getPlayers = async () => {
   const data = await response.json();
 
   for (let i = 0; i < data.result.length; i += 1) {
-    document.querySelector('ul').insertAdjacentHTML('beforeend', `<li>${data.result[i].user}: ${data.result[i].score}</li>`);
+    document.querySelector('ul').insertAdjacentHTML('beforeend', `<li class="border-white">${data.result[i].user}: ${data.result[i].score}</li>`);
   }
 };
 
